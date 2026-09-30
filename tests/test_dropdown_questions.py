@@ -20,6 +20,7 @@ class TestDropdownQuestions:
             (7, DropDownAnswers.ANSWER8),
         ]
     )
+    @allure.title("Проверка выпадающего списка: вопрос №{question_number} - ожидается ответ {answer}")
     def test_open_dropdown_question(self, question_number, answer, driver):
         main_page = MainPage(driver)
         main_page.open_page()
