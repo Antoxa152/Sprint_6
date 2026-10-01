@@ -38,6 +38,7 @@ class BasePage:
         wait.until(lambda driver: driver.current_url != "about:blank")
         return self.driver.current_url
 
+    @allure.step("Принудительный клик по элементу")
     def force_click_element(self, element):
         return self.driver.execute_script("arguments[0].click();", element)
 
