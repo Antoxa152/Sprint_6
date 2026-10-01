@@ -6,6 +6,7 @@ from utils.constants import Urls
 class TestScooterRedirect:
     @allure.feature('Функциональность редиректа на главную страницу.')
     @allure.description('Проверка редиректа на главную страницу с разных страниц.')
+    @allure.title("Проверка перехода на страницу заказа через кнопку в шапке")
     @pytest.mark.parametrize("initial_url", [Urls.ORDER_URL, Urls.TRACK_URL])
     def test_scooter_logo_redirect(self, initial_url, driver):
         main_page = MainPage(driver)
